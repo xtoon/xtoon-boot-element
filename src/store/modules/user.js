@@ -14,8 +14,8 @@ export default {
     updateTenantName (state, tenantName) {
       state.tenantName = tenantName
     },
-    updateUsers (state, users) {
-      state.users = users
+    updateTenants (state, tenants) {
+      state.tenants = tenants
     }
   }
 }

@@ -60,9 +60,9 @@
         get () { return this.$store.state.user.name },
         set (val) { this.$store.commit('user/updateName', val) }
       },
-      users: {
-        get () { return this.$store.state.user.users },
-        set (val) { this.$store.commit('user/updateUsers', val) }
+      tenants: {
+        get () { return this.$store.state.user.tenants },
+        set (val) { this.$store.commit('user/updateTenants', val) }
       }
     },
     created () {
@@ -88,10 +88,10 @@
         }).then(({data}) => {
           if (data && data.code === 0) {
             this.loading = false
-            this.userId = data.user.userId.id
-            this.userName = data.user.userName.name
-            this.tenantName = data.user.tenant.tenantName.name
-            this.users = data.user.account.users
+            this.userId = data.user.id
+            this.userName = data.user.userName
+            this.tenantName = data.user.tenantName
+            this.tenants = data.user.tenants
           }
         })
       }

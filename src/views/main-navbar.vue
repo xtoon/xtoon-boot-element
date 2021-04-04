@@ -19,7 +19,7 @@
         mode="horizontal">
         <el-submenu index="1">
           <template slot="title">{{ tenantName }}</template>
-          <el-menu-item v-for="(user,index) in users" :index="(index+'')" :key="index" @click.native="changeTenant(user.tenant.tenantId.id)">{{user.tenant.tenantName.name}}</el-menu-item>
+          <el-menu-item v-for="(tenant,index) in tenants" :index="(index+'')" :key="index" @click.native="changeTenant(tenant.tenantId)">{{tenant.tenantName}}</el-menu-item>
         </el-submenu>
         <el-menu-item index="2" @click="$router.push({ name: 'theme' })">
           <template slot="title">
@@ -76,8 +76,8 @@
       tenantName: {
         get () { return this.$store.state.user.tenantName }
       },
-      users: {
-        get () { return this.$store.state.user.users }
+      tenants: {
+        get () { return this.$store.state.user.tenants }
       }
     },
     methods: {
