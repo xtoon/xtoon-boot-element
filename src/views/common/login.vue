@@ -4,7 +4,7 @@
       <div class="site-content">
         <div class="brand-info">
           <h2 class="brand-info__text">享同开源</h2>
-          <p class="brand-info__intro">xtoon-boot是一款基于DDD领域模型<br>并支持SssS的企业级脚手架</p>
+          <p class="brand-info__intro">xtoon-boot是一款基于DDD领域模型<br>并支持SaaS的企业级脚手架</p>
         </div>
         <div class="login-main">
           <h3 class="login-title">登录</h3>
